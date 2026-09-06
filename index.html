@@ -326,7 +326,7 @@
                 
                 <div>
                     <div class="text-xs text-slate-400 mb-1">פרויקט נבחר:</div>
-                    <div id="modalProjectTitle" class="text-sm font-bold text-cyan-400 bg-white/5 p-2.5 rounded-xl border border-white/5"></div>
+                    <div id=\"modalProjectTitle\" class="text-sm font-bold text-cyan-400 bg-white/5 p-2.5 rounded-xl border border-white/5"></div>
                 </div>
 
                 <div>
@@ -344,7 +344,7 @@
 
         <!-- Category Manager Modal (Add / Delete / Reset) -->
         <div id="categoryManagerModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <div class="bg-slate-900 border border-white/15 rounded-2xl p-6 max-w-lg w-full shadow-2xl space-y-6 text-right max-h-[90vh] overflow-y-auto">
+            <div class="bg-slate-900 border border-white/15 rounded-2xl p-6 max-lg w-full shadow-2xl space-y-6 text-right max-h-[90vh] overflow-y-auto">
                 <div class="flex items-center justify-between border-b border-white/10 pb-3">
                     <h3 class="text-base font-bold text-white flex items-center gap-2">
                         <i class="fas fa-folder-open text-cyan-400 text-sm"></i>
@@ -591,221 +591,306 @@
 
         var INITIAL_PROJECTS = [
             {
-                id: "smartbutler-concierge",
-                title: "SmartButler AI Concierge",
-                category: "entrepreneurship",
-                isFavorite: true,
-                icon: "fas fa-robot",
-                gradient: "from-blue-600/20 to-cyan-500/20",
-                iconBg: "bg-blue-500/10 text-cyan-400 border-blue-500/20",
-                badge: "SaaS / AI Hospitality",
-                description: "עוזר אישי וירטואלי מבוסס AI לאורחי מלונות ודירות נופש. מאפשר תקשורת ישירה, המלצות מותאמות אישית, צ\'ק-אין דיגיטלי והזמנת שירותים בקלות דרך ממשק מותאם מובייל.",
-                url: "https://smart-butler-ai-concierge.vercel.app",
-                tags: ["Next.js", "OpenAI", "Tailwind", "Hotels", "Concierge"]
+                "id": "smartbutler-concierge",
+                "title": "SmartButler AI Concierge",
+                "category": "entrepreneurship",
+                "isFavorite": true,
+                "icon": "fas fa-robot",
+                "iconBg": "bg-blue-500/10 text-cyan-400 border-blue-500/20",
+                "badge": "Active",
+                "description": "מערכת קונסיירז' דיגיטלית חכמה לבתי מלון המופעלת באמצעות בינה מלאכותית. מאפשרת מענה אוטומטי מהיר לשאלות אורחים בשפה חופשית, כאשר מאחורי הקלעים מוצג דשבורד לניתוח פניות אורחים, פירוט מידע חסר והפקת תובנות HR ורמת שירות מבוססות נתונים בזמן אמת.",
+                "url": "https://smart-butler-ai-concierge.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "React",
+                    "Vercel",
+                    "GenAI"
+                ]
             },
             {
-                id: "ubidme-demo",
-                title: "UBIDME Demo",
-                category: "entrepreneurship",
-                isFavorite: false,
-                icon: "fas fa-tags",
-                gradient: "from-amber-600/20 to-orange-500/20",
-                iconBg: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-                badge: "Marketplace / FinTech",
-                description: "פלטפורמת מכרזים חכמה למוצרי תיירות ופנאי בזמן אמת. מודל תמחור דינמי המפגיש בין היצע מלונאי לביקוש צרכני גמיש.",
-                url: "https://ubidme-demo.vercel.app",
-                tags: ["React", "Bidding", "Marketplace", "Dynamic Pricing"]
+                "id": "ubidme-demo",
+                "title": "UBIDME Demo",
+                "category": "entrepreneurship",
+                "isFavorite": false,
+                "icon": "fas fa-tags",
+                "iconBg": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                "badge": "MVP",
+                "description": "גרסת ה-MVP הראשונית של פלטפורמת Ubidme. מאפשרת הגשת הצעות מחיר, ניהול מכרזים חכם והתאמה אופטימלית בין ספקים ולקוחות בממשק דינמי ומהיר המארגן את כל שלבי העסקה.",
+                "url": "https://ubidme-demo.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Vercel"
+                ]
             },
             {
-                id: "safmar",
-                title: "SAFMAR Room Service",
-                category: "entrepreneurship",
-                isFavorite: false,
-                icon: "fas fa-concierge-bell",
-                gradient: "from-emerald-600/20 to-teal-500/20",
-                iconBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-                badge: "Hospitality Tech",
-                description: "מערכת דיגיטלית להזמנת שירות חדרים במלונות. תפריט אינטראקטיבי, ניהול הזמנות ישירות למטבח וחיוב אוטומטי לחשבון החדר.",
-                url: "https://safmar.vercel.app",
-                tags: ["Room Service", "Hospitality", "QR Orders", "FastAPI"]
+                "id": "safmar",
+                "title": "SAFMAR Room Service",
+                "category": "entrepreneurship",
+                "isFavorite": false,
+                "icon": "fas fa-concierge-bell",
+                "iconBg": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                "badge": "Production",
+                "description": "אפליקציית שירות חדרים דיגיטלית מלאה המאפשרת לאורחים להזמין מזון ומשקאות ממחלקת שירות חדרים במלון ישירות מהנייד שלהם, תוך חיוב החדר בו הם מתארחים. כוללת פאנל ניהול תפעולי וניתוח זמני תגובה.",
+                "url": "https://safmar.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "Next.js",
+                    "Tailwind CSS",
+                    "Vercel"
+                ]
             },
             {
-                id: "b-c-app",
-                title: "Book & Choose Add-on",
-                category: "entrepreneurship",
-                isFavorite: false,
-                icon: "fas fa-calendar-check",
-                gradient: "from-purple-600/20 to-indigo-500/20",
-                iconBg: "bg-purple-500/10 text-purple-400 border-purple-500/20",
-                badge: "Booking Engine",
-                description: "תוסף חכם למנועי הזמנות המאפשר בחירה אישית של שדרוגים, חוויות ותוספות ייחודיות עוד לפני ההגעה למלון.",
-                url: "https://b-c-app.vercel.app",
-                tags: ["Booking Engine", "PMS Integration", "Upsell", "Add-ons"]
+                "id": "b-c-app",
+                "title": "Book & Choose Add-on",
+                "category": "entrepreneurship",
+                "isFavorite": false,
+                "icon": "fas fa-calendar-check",
+                "iconBg": "bg-purple-500/10 text-purple-400 border-purple-500/20",
+                "badge": "Active",
+                "description": "תוסף חכם למערכות הזמנות חדרים של בתי מלון המאפשר למשתמשים לסנן לבחור ולהזמין חדר ספציפי, על בסיס מגוון מאפיינים ייחודיים למלון בצורה דינמית ומותאמת אישית לצרכים שלהם, תוך שקיפות מלאה לתוספת העלות. הבחירה תירשם במערכת הניהול של המלון והאורח יקבל את החדר המבוקש בהגיע מועד האירוח.",
+                "url": "https://b-c-app.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "React",
+                    "Tailwind CSS",
+                    "Vercel"
+                ]
             },
             {
-                id: "nihul-plus",
-                title: "Nihul Plus AI Diagnostics",
-                category: "clients",
-                isFavorite: true,
-                icon: "fas fa-chart-line",
-                gradient: "from-blue-600/20 to-indigo-500/20",
-                iconBg: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-                badge: "HR Tech / AI Diagnostics",
-                description: "מערכת אבחון ארגוני וניהול ביצועים מבוססת מודלי שפה (LLM). עיבוד שאלונים, יצירת פרופיל ניהולי ודוחות תובנות אוטומטיים.",
-                url: "https://nihul-plus-ai.vercel.app",
-                tags: ["HR Analytics", "LLM Insights", "Management", "Next.js"]
+                "id": "nihul-plus",
+                "title": "Nihul Plus AI Diagnostics",
+                "category": "clients",
+                "isFavorite": true,
+                "icon": "fas fa-chart-line",
+                "iconBg": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                "badge": "Production",
+                "description": "מערכת אבחון וייעוץ חכמה לקורסים וניהול למידה (Course Diagnostic Tool). מאפשרת למתעניינים למצוא את הקורס הנכון עבורם ללימוד, מתוך מגוון קורסים רחב על סמך מענה על שאלון קצר בעקבותיו מופק דוח המלצות אישי וקישור לתאום מפגש טלפוני או פרונטלי עם יועץ לימודים. מאחורי הקלעים מימשק ניהול יעיל לצוות המכללה לעדכון קורסים, תנאי הרשמה ומעקב אחר פניות מתעניינים.",
+                "url": "https://nihul-plus.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "Next.js",
+                    "React",
+                    "Vercel"
+                ]
             },
             {
-                id: "chess-game",
-                title: "Chess AI Master",
-                category: "hobbies",
-                isFavorite: false,
-                icon: "fas fa-chess-knight",
-                gradient: "from-slate-700/30 to-slate-800/30",
-                iconBg: "bg-slate-700/20 text-slate-300 border-slate-600/30",
-                badge: "Gaming / AI Engine",
-                description: "משחק שחמט אינטראקטיבי עם שילוב מנוע בינה מלאכותית (Stockfish), ניתוח מהלכים בזמן אמת, רמות קושי שונות ולוח מעוצב.",
-                url: "https://chess-game-danbar.vercel.app",
-                tags: ["Chess Engine", "Stockfish API", "Game UI", "WebAudio"]
+                "id": "chess-game",
+                "title": "Chess Game",
+                "category": "hobbies",
+                "isFavorite": false,
+                "icon": "fas fa-chess-knight",
+                "iconBg": "bg-slate-700/20 text-slate-300 border-slate-600/30",
+                "badge": "Active",
+                "description": "משחק שחמט דינמי מבוסס React המיועד למשחק מרחוק (Remote Play). כולל מנוע שחמט מלא, לוגיקת FEN ושילוב מודל בינה מלאכותית (Gemini AI) להמלצות וניתוח מהלכים.",
+                "url": "https://chess-game-danbar-danbar.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "React",
+                    "Vite",
+                    "Gemini AI"
+                ]
             },
             {
-                id: "korea-osint",
-                title: "North Korea OSINT Monitor",
-                category: "hobbies",
-                isFavorite: false,
-                icon: "fas fa-satellite",
-                gradient: "from-red-600/20 to-rose-500/20",
-                iconBg: "bg-red-500/10 text-red-400 border-red-500/20",
-                badge: "Intelligence / OSINT",
-                description: "מערכת מעקב וניתוח מודיעין גלוי (OSINT) סביב פעילות צפון קוריאה. איסוף נתונים לווייניים, מעקב אחר שיגורים ודוחות גיאופוליטיים.",
-                url: "https://north-korea-osint.vercel.app",
-                tags: ["OSINT", "Data Scraping", "Live Maps", "GeoJSON"]
+                "id": "korea-osint",
+                "title": "Korea OSINT Dashboard",
+                "category": "hobbies",
+                "isFavorite": false,
+                "icon": "fas fa-satellite",
+                "iconBg": "bg-red-500/10 text-red-400 border-red-500/20",
+                "badge": "Active",
+                "description": "לוח בקרה חכם לניתוח וסינון מודיעין ממקורות גלויים (OSINT) סביב דרום קוריאה. מאפשר ריכוז וסינון דיווחים יומיים, ניהול מקורות מידע ומערכת ניתוח איומים המבוססת על נתונים בזמן אמת.",
+                "url": "https://korea-osint-danbar-danbar.vercel.app",
+                "tags": [
+                    "TypeScript",
+                    "React",
+                    "Vite",
+                    "OSINT APIs"
+                ]
             },
             {
-                id: "whatsapp-agent",
-                title: "WhatsApp AI Sales & Service Agent",
-                category: "clients",
-                isFavorite: true,
-                icon: "fab fa-whatsapp",
-                gradient: "from-green-600/20 to-emerald-500/20",
-                iconBg: "bg-green-500/10 text-green-400 border-green-500/20",
-                badge: "Conversational AI / WhatsApp",
-                description: "סוכן וירטואלי חכם המשולב ישירות ב-WhatsApp Business API. מענה אוטומטי להודעות נכנסות, קביעת פגישות ביומן, טיפול בלידים וסנכרון מלא ל-CRM בזמן אמת.",
-                tags: ["WhatsApp API", "GPT-4o", "Make / Zapier", "CRM Sync", "Voice Notes"]
+                "id": "whatsapp-agent",
+                "title": "WhatsApp AI Agent",
+                "category": "clients",
+                "isFavorite": true,
+                "icon": "fab fa-whatsapp",
+                "iconBg": "bg-green-500/10 text-green-400 border-green-500/20",
+                "badge": "Local Bot",
+                "description": "סוכן וואטסאפ אישי המופעל מקומית (בלי שרת וענן), המאפשר בדיקת יומן, שליפת מיילים ומשימות דרך הודעות וואטסאפ רגילות, בשילוב Claude Code, Green API ואינטגרציות Composio.",
+                "url": "",
+                "tags": [
+                    "Node.js",
+                    "Claude Code",
+                    "Green API",
+                    "Composio"
+                ]
             },
             {
-                id: "peter-lemish",
-                title: "Peter Lemish Archive & Digital Legacy",
-                category: "clients",
-                isFavorite: false,
-                icon: "fas fa-book-open",
-                gradient: "from-amber-600/20 to-yellow-500/20",
-                iconBg: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-                badge: "Digital Archive / AI Search",
-                description: "פלטפורמת שימור ומפעל חיים דיגיטלי למאמריו ומחקריו של ד\"ר פיטר למיש. כוללת מנוע חיפוש סמנטי מבוסס AI, תיוג אוטומטי של מאות מסמכים וממשק קריאה אינטראקטיבי.",
-                url: "https://peter-lemish-archive.vercel.app",
-                tags: ["Vector Search", "Semantic Indexing", "Document AI", "Archive UI"]
+                "id": "peter-lemish",
+                "title": "Peter Lemish App",
+                "category": "hobbies",
+                "isFavorite": false,
+                "icon": "fas fa-book-open",
+                "iconBg": "bg-amber-500/10 text-amber-400 border-amber-500/20",
+                "badge": "Funny App",
+                "description": "אפליקציה הומוריסטית וחווייתית לחקירת תחקירים (\"פיטר למיש: תחקיר הגבורות\"). פותחה באמצעות React ו-Tailwind CSS עם ממשק משתמש קליל, דינמי ומשעשע.",
+                "url": "https://peter-lemish-danbar-danbar.vercel.app",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Tailwind CSS"
+                ]
             },
             {
-                id: "fitflow",
-                title: "FitFlow - AI Studio Booking Engine",
-                category: "clients",
-                isFavorite: false,
-                icon: "fas fa-dumbbell",
-                gradient: "from-cyan-600/20 to-blue-500/20",
-                iconBg: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-                badge: "Full-Stack SaaS / Fitness",
-                description: "מערכת ניהול והזמנת אימונים לסטודיו וחדרי כושר. ממשק מתאמנים להרשמה לשיעורים, רשימות המתנה אוטומטיות, סליקת תשלומים ולוח בקרה ניהולי למאמנים.",
-                tags: ["Next.js 14", "Stripe API", "TailwindCSS", "Real-Time DB", "SMS Alerts"]
+                "id": "fitflow",
+                "title": "FitFlow Fitness App",
+                "category": "hobbies",
+                "isFavorite": false,
+                "icon": "fas fa-stopwatch-20",
+                "iconBg": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+                "badge": "Active",
+                "description": "אפליקציית טיימר אימונים וכושר מתקדמת (Fitness Timer) המאפשרת יצירת תוכניות אימון מותאמות אישית, ניהול אינטרוולים וזמני מנוחה דינמיים, בממשק ספורטיבי, אנרגטי ומודרני.",
+                "url": "https://fitflow-danbar.vercel.app",
+                "tags": [
+                    "React",
+                    "TypeScript",
+                    "Vite",
+                    "Firebase",
+                    "Fitness Timer"
+                ]
             },
             {
-                id: "youtube-growth-agent",
-                title: "YouTube Content & Growth AI Agent",
-                category: "clients",
-                isFavorite: false,
-                icon: "fab fa-youtube",
-                gradient: "from-red-600/20 to-pink-500/20",
-                iconBg: "bg-red-500/10 text-red-400 border-red-500/20",
-                badge: "Content Ops / Video AI",
-                description: "מערכת אוטונומית לניתוח טרנדים, יצירת תסריטים, הפקת כותרות ממירות ו-SEO לערוצי YouTube. מייעלת את תהליך הפקת התוכן ומגדילה את ה-CTR והצפיות.",
-                tags: ["YouTube API", "Trend Analysis", "Prompt Engineering", "SEO Automation"]
+                "id": "youtube-growth-agent",
+                "title": "YouTube Growth Agent",
+                "category": "hobbies",
+                "isFavorite": false,
+                "icon": "fab fa-youtube",
+                "iconBg": "bg-red-500/10 text-red-400 border-red-500/20",
+                "badge": "Active",
+                "description": "סוכן AI מבוסס Composio העוקב אחר ערוצי היוטיוב של הנכדים (כפיר ורומי), מנתח ביצועי סרטונים, מזהה מגמות מעורבות ומפיק דוחות מותאמים אישית לשיפור וצמיחה.",
+                "url": "https://youtube-improve-danbar.vercel.app",
+                "tags": [
+                    "Python",
+                    "Composio",
+                    "YouTube API",
+                    "Local Run"
+                ]
             },
             {
-                id: "pricing-calculator",
-                title: "Dynamic Business Pricing Calculator",
-                category: "entrepreneurship",
-                isFavorite: false,
-                icon: "fas fa-calculator",
-                gradient: "from-emerald-600/20 to-cyan-500/20",
-                iconBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-                badge: "FinTech / Business Tool",
-                description: "מחשבון תמחור עסקי דינמי לחישוב מדויק של מחיר רצפה, מחיר יעד ושיעורי רווחיות לכל פרויקט. מתחשב בהוצאות קבועות, משתנות ועלויות כוח אדם.",
-                tags: ["Financial Modeling", "Pricing Strategy", "Interactive UI", "Export PDF"]
+                "id": "pricing-calculator",
+                "title": "Business Pricing Calculator",
+                "category": "entrepreneurship",
+                "isFavorite": false,
+                "icon": "fas fa-calculator",
+                "iconBg": "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+                "badge": "Local Tool",
+                "description": "מחשבון תמחור עסקי פנימי מבוסס HTML ו-Python, המחשב לכל פרויקט ועבודה את מחיר הרצפה (כיסוי עלויות), מחיר המטרה (כולל הרווח המבוקש) ומתריע מפני ירידה מתחת לרווחיות.",
+                "url": "",
+                "tags": [
+                    "Python",
+                    "HTML5 / RTL",
+                    "Local Storage",
+                    "Cost Modeling"
+                ]
             },
             {
-                id: "polyglot-studio",
-                title: "Polyglot Practice Studio",
-                category: "hobbies",
-                isFavorite: true,
-                icon: "fas fa-language",
-                gradient: "from-indigo-600/20 to-purple-500/20",
-                iconBg: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
-                badge: "EdTech / Voice AI",
-                description: "אפליקציה אינטראקטיבית לתרגול שיחה ולימוד שפות מבוססת בינה מלאכותית קולית. זיהוי דיבור בזמן אמת, משוב על הגייה ודקדוק, ותרגול שיחות בעברית, אנגלית ושפות נוספות.",
-                url: "https://english-practice-studio.vercel.app",
-                tags: ["Web Speech API", "Voice AI", "Language Learning", "Pronunciation Feedback"]
+                "id": "polyglot-studio",
+                "title": "Polyglot Practice Studio",
+                "category": "hobbies",
+                "isFavorite": true,
+                "icon": "fas fa-language",
+                "iconBg": "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+                "badge": "Active",
+                "description": "אפליקציה אינטראקטיבית לתרגול שיחה ולימוד שפות מבוססת בינה מלאכותית קולית. זיהוי דיבור בזמן אמת, משוב על הגייה ודקדוק, ותרגול שיחות בעברית, אנגלית ושפות נוספות.",
+                "url": "https://english-practice-studio.vercel.app",
+                "tags": [
+                    "Voice AI",
+                    "Web Speech API",
+                    "Language Practice",
+                    "Vercel"
+                ]
             },
             {
-                id: "writing-agent",
-                title: "DANBAR Voice & Style Writing Agent",
-                category: "entrepreneurship",
-                isFavorite: true,
-                icon: "fas fa-pen-nib",
-                gradient: "from-violet-600/20 to-purple-500/20",
-                iconBg: "bg-violet-500/10 text-violet-400 border-violet-500/20",
-                badge: "Content Strategy / AI Persona",
-                description: "סוכן AI מותאם אישית הכותב בסגנון הייחודי של דני ברקאי (בלוג דילמות מעולמו של מנהל משאבי אנוש ו-DANBAR). מייצר פוסטים מעמיקים, ניתוחי שוק ומאמרי דעה בטון אותנטי.",
-                tags: ["Custom AI Persona", "Few-Shot Learning", "LinkedIn Strategy", "Thought Leadership"]
+                "id": "writing-agent",
+                "title": "DANBAR Writing Agent",
+                "category": "entrepreneurship",
+                "isFavorite": true,
+                "icon": "fas fa-pen-nib",
+                "iconBg": "bg-purple-500/10 text-purple-400 border-purple-500/20",
+                "badge": "Writing Agent",
+                "description": "סוכן AI מתקדם לכתיבת פוסטים, בלוגים ומאמרים בסגנון החתום של דני ברקאי. כולל 3 מצבי יצירה, מחקר רשת עצמאי, אשף תשאול מונחה ובקר סגנון אותנטי בזמן אמת.",
+                "url": "https://danny-barkai-writing-agent.vercel.app",
+                "tags": [
+                    "Next.js 14",
+                    "React / TS",
+                    "Gemini API",
+                    "Tailwind CSS"
+                ]
             },
             {
-                id: "smartbutler-webinar",
-                title: "וובינר סמארטבטלר 10/26",
-                category: "entrepreneurship",
-                isFavorite: true,
-                icon: "fas fa-video",
-                gradient: "from-cyan-600/20 to-blue-500/20",
-                iconBg: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
-                badge: "Webinar & Launch Hub",
-                description: "מרכז שידור, הרשמה וחומרי הדרכה לוובינר סמארטבטלר (10/26). כולל דף נחיתה והרשמה, דף תודה, מצגת שידור מלאה (31 שקפים), תיק יום שידור וצ'קליסט, ותיק תזכורות מיילים.",
-                url: "https://smartbutler-webinar-danbar.vercel.app",
-                subLinks: [
-                    { label: "🔗 דף הרשמה ראשי", url: "https://smartbutler-webinar-danbar.vercel.app" },
-                    { label: "🔗 דף תודה ואישור", url: "https://smartbutler-webinar-danbar.vercel.app/thank-you" },
-                    { label: "🖥️ מצגת שידור (31 שקפים)", url: "https://smartbutler-webinar-danbar.vercel.app/deck" },
-                    { label: "📋 תיק יום שידור וצ'קליסט", url: "https://smartbutler-webinar-danbar.vercel.app/webinar-day-doc" },
-                    { label: "✉️ תיק תזכורות מיילים", url: "https://smartbutler-webinar-danbar.vercel.app/reminders-doc" }
+                "id": "smartbutler-webinar",
+                "title": "וובינר סמארטבטלר 10/26",
+                "category": "entrepreneurship",
+                "isFavorite": true,
+                "icon": "fas fa-video",
+                "iconBg": "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+                "badge": "Webinar Suite",
+                "description": "מרכז שידור, הרשמה וחומרי הדרכה לוובינר סמארטבטלר (10/26). כולל דף נחיתה והרשמה, דף תודה, מצגת שידור מלאה (31 שקפים), תיק יום שידור וצ'קליסט, ותיק תזכורות מיילים.",
+                "url": "https://smartbutler-webinar-danbar.vercel.app",
+                "subLinks": [
+                    {
+                        "label": "🔗 דף הרשמה ראשי",
+                        "url": "https://smartbutler-webinar-danbar.vercel.app"
+                    },
+                    {
+                        "label": "🔗 דף תודה ואישור",
+                        "url": "https://smartbutler-webinar-danbar.vercel.app/thank-you"
+                    },
+                    {
+                        "label": "🖥️ מצגת שידור (31 שקפים)",
+                        "url": "https://smartbutler-webinar-danbar.vercel.app/deck"
+                    },
+                    {
+                        "label": "📋 תיק יום שידור וצ'קליסט",
+                        "url": "https://smartbutler-webinar-danbar.vercel.app/webinar-day-doc"
+                    },
+                    {
+                        "label": "✉️ תיק תזכורות מיילים",
+                        "url": "https://smartbutler-webinar-danbar.vercel.app/reminders-doc"
+                    }
                 ],
-                tags: ["Next.js", "Webinar Hub", "Lead Gen", "Interactive Deck", "Email Sequences"]
+                "tags": [
+                    "Webinar Hub",
+                    "Lead Gen",
+                    "Interactive Deck",
+                    "Email Sequences"
+                ]
             },
             {
-                id: "linkedin-competitor",
-                title: "LinkedIn Competitor Intelligence",
-                category: "entrepreneurship",
-                isFavorite: true,
-                icon: "fas fa-users-viewfinder",
-                gradient: "from-blue-600/20 to-teal-500/20",
-                iconBg: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-                badge: "Market Research / AI Analysis",
-                description: "פלטפורמת מחקר והשוואת מתחרים ברשת LinkedIn. ניתוח פרופילי מובילי דעה, מעקב תדירות פרסום ומעורבות (Engagement), וזיהוי הזדמנויות תוכן אסטרטגיות.",
-                url: "https://competitor-research-app.vercel.app/",
-                tags: ["LinkedIn OSINT", "Competitive Intel", "Market Research", "Streamlit / Python"]
+                "id": "linkedin-competitor",
+                "title": "LinkedIn Competitor Intelligence",
+                "category": "entrepreneurship",
+                "isFavorite": true,
+                "icon": "fas fa-users-viewfinder",
+                "iconBg": "bg-blue-500/10 text-blue-400 border-blue-500/20",
+                "badge": "Active",
+                "description": "אפליקציה למחקר והשוואת מתחרים ברשת LinkedIn. ניתוח פרופילי מובילי דעה, מעקב תדירות פרסום ומעורבות, וזיהוי הזדמנויות תוכן אסטרטגיות.",
+                "url": "https://competitor-research-app.vercel.app/",
+                "tags": [
+                    "Python",
+                    "Streamlit",
+                    "LinkedIn Analysis",
+                    "Vercel"
+                ]
             }
         ];
 
         var STORAGE_KEYS = {
-            CATEGORIES: 'danbar_portfolio_categories_v2',
-            PROJECTS: 'danbar_portfolio_projects_v2',
-            ACTIVE_CAT: 'danbar_portfolio_active_cat_v2'
+            CATEGORIES: 'danbar_portfolio_categories_v3',
+            PROJECTS: 'danbar_portfolio_projects_v3',
+            ACTIVE_CAT: 'danbar_portfolio_active_cat_v3'
         };
 
         var currentCategory = 'all';
