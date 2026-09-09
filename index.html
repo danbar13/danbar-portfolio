@@ -326,7 +326,7 @@
                 
                 <div>
                     <div class="text-xs text-slate-400 mb-1">פרויקט נבחר:</div>
-                    <div id=\"modalProjectTitle\" class="text-sm font-bold text-cyan-400 bg-white/5 p-2.5 rounded-xl border border-white/5"></div>
+                    <div id="modalProjectTitle" class="text-sm font-bold text-cyan-400 bg-white/5 p-2.5 rounded-xl border border-white/5"></div>
                 </div>
 
                 <div>
@@ -344,7 +344,7 @@
 
         <!-- Category Manager Modal (Add / Delete / Reset) -->
         <div id="categoryManagerModal" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <div class="bg-slate-900 border border-white/15 rounded-2xl p-6 max-lg w-full shadow-2xl space-y-6 text-right max-h-[90vh] overflow-y-auto">
+            <div class="bg-slate-900 border border-white/15 rounded-2xl p-6 max-w-lg w-full shadow-2xl space-y-6 text-right max-h-[90vh] overflow-y-auto">
                 <div class="flex items-center justify-between border-b border-white/10 pb-3">
                     <h3 class="text-base font-bold text-white flex items-center gap-2">
                         <i class="fas fa-folder-open text-cyan-400 text-sm"></i>
@@ -372,6 +372,8 @@
                             <option value="fas fa-code">💻 פיתוח</option>
                             <option value="fas fa-gamepad">🎮 משחקים</option>
                             <option value="fas fa-tools">🛠️ כלים</option>
+                            <option value="fas fa-vial">🧪 מעבדה / רפואה</option>
+                            <option value="fas fa-heartbeat">❤️ בריאות</option>
                             <option value="fas fa-layer-group">📁 תיקייה</option>
                         </select>
                         <button onclick="addNewCategory()" class="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-md flex-shrink-0">
@@ -590,6 +592,25 @@
         ];
 
         var INITIAL_PROJECTS = [
+            {
+                "id": "maccabi-lab-ai",
+                "title": "מעבדה AI - מכבי שירותי בריאות",
+                "category": "entrepreneurship",
+                "isFavorite": true,
+                "icon": "fas fa-vial",
+                "iconBg": "bg-blue-500/10 text-cyan-400 border-blue-500/20",
+                "badge": "Healthcare AI / Bossa Nova",
+                "description": "סייען קדם-אנליטי חכם תומך החלטה לעובדות ועובדי מעבדה ולקיחת דמים במרפאות מכבי שירותי בריאות (אתגר החדשנות \"AIנשטיין\"). כולל סנכרון הפניות ממערכת בוסה נובה, מניעת שגיאות קדם-אנליטיות, אימות תנאי הכנה, סדר לקיחת מבחנות תקני ומעמד מבחנות וירטואלי אינטראקטיבי.",
+                "url": "https://maccabi-lab-ai.vercel.app",
+                "tags": [
+                    "Healthcare AI",
+                    "Maccabi Health",
+                    "CLSI Standards",
+                    "Web Audio API",
+                    "Tailwind CSS",
+                    "Vercel"
+                ]
+            },
             {
                 "id": "smartbutler-concierge",
                 "title": "SmartButler AI Concierge",
@@ -888,9 +909,9 @@
         ];
 
         var STORAGE_KEYS = {
-            CATEGORIES: 'danbar_portfolio_categories_v3',
-            PROJECTS: 'danbar_portfolio_projects_v3',
-            ACTIVE_CAT: 'danbar_portfolio_active_cat_v3'
+            CATEGORIES: 'danbar_portfolio_categories_v4',
+            PROJECTS: 'danbar_portfolio_projects_v4',
+            ACTIVE_CAT: 'danbar_portfolio_active_cat_v4'
         };
 
         var currentCategory = 'all';
